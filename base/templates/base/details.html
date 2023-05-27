@@ -1,0 +1,11 @@
+{% if request.user.is_authenticated %}
+<h2>Task: {{taskdetail.title}}</h2>
+<p>Description: {{taskdetail.desc}}</p>
+{% if taskdetail.completed is True %}
+<p>Status: Completed</p>
+{% else %}
+<p>Status: Not Completed</p>
+{% endif %}
+{% endif %}
+
+
